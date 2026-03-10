@@ -18,7 +18,7 @@ app.add_middleware(
 @app.post("/api/review")
 async def review_paper(
     file: UploadFile = File(...),
-    llm_backend: str = Form("local"),   # "local" | "mock" | "cloud" | "gemini"
+    llm_backend: str = Form("local"),   # "local" | "mock" | "claude" | "gemini"
 ):
     """
     llm_backend options:
